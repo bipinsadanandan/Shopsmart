@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ShopSmart</title>
+   
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.admin-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logout-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.content-section {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h2 {
+    margin-top: 20px;
+    color: #333;
+}
+#searchInput {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+th {
+    background-color: #333;
+    color: white;
+}
+
+</style>
+<body>
+    <header class="admin-header">
+        <h1>ShopSmart Admin Dashboard</h1>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </header>
+    
+    <section class="content-section">
+        <h2>User Details</h2>
+        <div id="user-details"></div>
+        
+        <h2>Order Details</h2>
+        <input type="text" id="searchInput" placeholder="Search by item name" oninput="searchOrders()">
+        <div id="order-details"></div>
+    </section>
+    
+    <script src="script3.js"></script>
+</body>
+</html>
